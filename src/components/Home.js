@@ -7,7 +7,7 @@ const HomePageTemplate = ({
   fullImage,
   main
 }) => (
-    <section className="hero" key={post.id} style={{ backgroundImage: `url(${fullImage})` }}>
+    <section className="hero" style={{ backgroundImage: `url(${fullImage})` }}>
         <div className="container">
             <div className="hero-body">
                 <div className="columns is-centered">
