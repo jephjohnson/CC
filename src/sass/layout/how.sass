@@ -1,0 +1,66 @@
+figure
+.image
+    width: 100%
+    max-width: 30rem
+    height: auto
+    margin: 0 auto
+
+.media-left
+    margin: 0
+
+    +tablet 
+        margin-right: 0
+
+    +desktop 
+        margin-right: 4rem
+
+.content
+    h2
+        color: $blue
+    h6
+        color: $orange
+        text-transform: uppercase
+        margin-bottom: 0
+        line-height: 1.5rem
+        font-family: $lato
+    
+    p
+        margin-top: 0.5rem
+
+.box
+    box-shadow: none
+    padding: 0
+
+    article
+        align-items: center
+
+.how-modules
+    &:nth-child(2)
+        article
+            .media-content
+               order: -1
+            
+            .media-left
+                margin-right: 0
+                margin-left: 0
+
+                +desktop 
+                    margin-left: 4rem
+                
+
+.media
+    display: block
+        
+    +desktop 
+        display: flex
+
+.media-content
+    width: 100%
+    margin: 2rem auto
+    text-align: center
+
+    +tablet
+        width: 75%
+
+    +desktop 
+        text-align: left

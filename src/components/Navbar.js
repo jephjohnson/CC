@@ -1,80 +1,85 @@
-import React from 'react'
+import React from "react"
 import { Link } from 'gatsby'
-import github from '../img/github-icon.svg'
-import logo from '../img/logo.svg'
+import Hamburger from './Hamburger'
+import CN from 'classnames';
+import { connect } from "react-redux"
+import { bindActionCreators } from "redux";
+import * as toggleactionCreators from '../actions/toggleActions';
 
-const Navbar = class extends React.Component {
+import logo from '../img/logo.png'
 
-  componentDidMount() {
-    // Get all "navbar-burger" elements
-   const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-    // Check if there are any navbar burgers
-   if ($navbarBurgers.length > 0) {
- 
-     // Add a click event on each of them
-     $navbarBurgers.forEach( el => {
-       el.addEventListener('click', () => {
- 
-         // Get the target from the "data-target" attribute
-         const target = el.dataset.target;
-         const $target = document.getElementById(target);
- 
-         // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-         el.classList.toggle('is-active');
-         $target.classList.toggle('is-active');
- 
-       });
-     });
-   }
- }
- 
- render() {
-   return (
+
+const mapStateToProps = (state) => ({ hidden: state.toggle.hidden });
+const mapDispatchToProps = (dispatch) => bindActionCreators({...toggleactionCreators}, dispatch)
+
+
+class Navbar extends React.Component {
   
-  <nav className="navbar is-transparent" role="navigation" aria-label="main-navigation">
-    <div className="container">
-      <div className="navbar-brand">
-        <Link to="/" className="navbar-item" title="Logo">
-          <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
+  toggleDiv() {
+    this.props.toggleDiv();
+  }
+
+  render () {
+    const { hidden} = this.props;
+
+    const navLinks = [
+      {route: '/', text: 'What'},
+      {route: '/hows', text: 'How'},
+      {route: '/ideas', text: 'Ideas'},
+      {route: '/contact', text: 'Contact'},
+      
+    ];
+
+    const Links = navLinks.map((b, i) =>
+      <Link key={ i } to={b.route} activeStyle={{color: 'red'}} className="link is-info navbar-item is-hidden-desktop">
+        {b.text}
+      </Link>
+    );
+
+    const Links1 = navLinks.slice(0, 2).map((b, i) =>
+      <p key={ i } className="level-item has-text-centered is-hidden-touch">
+        <Link to={b.route} activeStyle={{color: 'red',  borderBottom: '3px solid red'}} className="link is-info">
+          {b.text}
         </Link>
-        {/* Hamburger menu */}
-        <div className="navbar-burger burger" data-target="navMenu">
-          <span></span>
-          <span></span>
-          <span></span>
+      </p>
+    );
+
+    const Links2 = navLinks.slice(-2).map((b, i) =>
+    <p key={ i } className="level-item has-text-centered is-hidden-touch">
+      <Link to={b.route} activeStyle={{color: 'red', borderBottom: '3px solid red'}} className="link is-info">
+        {b.text}
+      </Link>
+    </p>
+  );
+
+    return (
+      <nav className="navbar is-transparent" role="navigation" aria-label="main navigation">
+        <div className="level container">
+          { Links1 }
+          <div className="navbar-brand level-item has-text-centered">
+              <Link to="/" className="navbar-item">
+                <figure className="image">
+                  <img src={logo} alt="CIC logo" style={{ width: '80px' }} />
+                </figure>
+              </Link>
+              <Hamburger onClick={this.toggleDiv.bind(this)} className={CN('navbar-burger burger', {'is-active': hidden})} />
+          </div>
+          <div id="navMenu" onClick={this.toggleDiv.bind(this)} className={CN('navbar-menu is-hidden-desktop', {'is-active': hidden})}>
+            <div className="navbar-end">
+              {Links}
+            </div>
+          </div>
+          { Links2 }
         </div>
-      </div>
-      <div id="navMenu" className="navbar-menu">
-      <div className="navbar-start has-text-centered">
-        <Link className="navbar-item" to="/about">
-          About
-        </Link>
-        <Link className="navbar-item" to="/products">
-          Products
-        </Link>
-        <Link className="navbar-item" to="/contact">
-          Contact
-        </Link>
-        <Link className="navbar-item" to="/contact/examples">
-          Form Examples
-        </Link>
-      </div>
-      <div className="navbar-end has-text-centered">
-        <a
-          className="navbar-item"
-          href="https://github.com/AustinGreen/gatsby-netlify-cms-boilerplate"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span className="icon">
-            <img src={github} alt="Github" />
-          </span>
-        </a>
-      </div>
-      </div>
-    </div>
-  </nav>
-  )}
+      </nav>
+    )
+  }
 }
 
-export default Navbar
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Navbar)
+
+
+

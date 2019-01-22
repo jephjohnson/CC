@@ -5,6 +5,7 @@
   "author": "Austin Green",
   "dependencies": {
     "bulma": "^0.7.0",
+    "classnames": "^2.2.6",
     "gatsby": "^2.0.66",
     "gatsby-image": "^2.0.23",
     "gatsby-plugin-netlify": "^2.0.6",
@@ -22,12 +23,19 @@
     "lodash": "^4.17.5",
     "lodash-webpack-plugin": "^0.11.4",
     "netlify-cms": "^2.3.2",
+    "netlify-cms-widget-native-color": "^3.0.0",
     "node-sass": "^4.11.0",
     "parcel-bundler": "^1.9.4",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.4.1",
     "react-helmet": "^5.2.0",
+    "react-markdown": "^4.0.6",
+    "react-redux": "^6.0.0",
+    "react-router-dom": "^4.3.1",
+    "react-router-redux": "^4.0.8",
+    "redux": "^4.0.1",
+    "redux-logger": "^3.0.6",
     "uuid": "^3.2.1"
   },
   "keywords": [

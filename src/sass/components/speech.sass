@@ -1,0 +1,31 @@
+.speech-bubble
+    position: fixed
+    background: $green
+    border-radius: 2rem
+    padding: 0.5rem
+    width: 7rem
+    margin: 0 auto
+    text-align: center
+    bottom: 5%
+    right: 2%
+    z-index: 2
+    cursor: pointer 
+        
+    &::after
+        content: ''
+        position: absolute
+        bottom: 1.5rem
+        right: 0.5rem
+        width: 0
+        height: 0
+        border: 40px solid transparent
+        border-top-color: $green
+        border-bottom: 0
+        border-right: 0
+        margin-bottom: -2.5rem
+        transform: rotate(-19deg)
+
+    p
+        position: relative
+        z-index: 1
+        color: white

@@ -1,0 +1,52 @@
+.hero 
+    background-size: cover;
+    background-repeat: no-repeat
+
+    .subtitle
+        display: none
+    
+        +tablet 
+            display: block
+
+        strong
+            color: $orange
+    
+    &-body
+        padding: 4rem 1.5rem
+
+    &-copy
+        position: relative
+        margin: 0 auto
+
+.arrow 
+    margin: auto
+    box-sizing: border-box
+    height: 2rem
+    max-width: 2rem
+    border-style: solid
+    border-color: $orange
+    border-width: 0px 2px 2px 0px
+    transform: rotate(45deg)
+    display: block
+
+    &-wrapper 
+        align-self: flex-end;
+
+.intro 
+    min-height: 20rem
+    
+    h1, h3 
+        color: white
+
+#hero-mobile
+    display: block
+    margin-bottom: 2rem
+
+    +tablet 
+        display: none
+
+    .subtitle
+        color: $blue
+
+        strong
+            color: $orange
