@@ -18,7 +18,6 @@ collections:
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
-
   - name: "pages"
     label: "Pages"
     files:
@@ -29,17 +28,57 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
-      - file: "src/pages/products/index.md"
-        label: "Products Page"
-        name: "products"
+      - file: "src/pages/home/index.md"
+        label: "Home Page"
+        name: "home"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "product-page"}
-          - {label: Title, name: title, widget: string}
-          - {label: Image, name: image, widget: image}
-          - {label: Heading, name: heading, widget: string}
-          - {label: Description, name: description, widget: string}
-          - {label: Intro, name: intro, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}]}]}
-          - {label: Main, name: main, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Image1, name: image1, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image2, name: image2, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image3, name: image3, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}]}
-          - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "home-page"}
           - {label: Full_image, name: full_image, widget: image}
-          - {label: Pricing, name: pricing, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: string}, {label: Plans, name: plans, widget: list, fields: [{label: Plan, name: plan, widget: string}, {label: Price, name: price, widget: string}, {label: Description, name: description, widget: string}, {label: Items, name: items, widget: list}]}]}
+          - {label: Heading, name: heading, widget: markdown}
+          - {label: Description, name: description, widget: markdown}
+          - {label: Main, name: main, widget: object, fields: 
+              [{label: Image1, name: image1, widget: object, fields: 
+              [{label: Color, name: color, widget: native-color}, 
+              {label: Image, name: image, widget: image}, 
+              {label: Large Image, name: large_image, widget: image}, 
+              {label: Large Image Client Title, name: large_image_client_title, widget: markdown}, 
+              {label: Large Image Client Description, name: large_image_client_description, widget: markdown},
+              {label: Project Team Members, name: large_image_team_members, widget: markdown}, 
+              {label: Alt, name: alt, widget: string}, 
+              {label: Title, name: title, widget: markdown}, 
+              {label: Subtitle, name: subtitle, widget: markdown}, 
+              {label: Description, name: description, widget: markdown}]}, 
+              {label: Image 2, name: image2, widget: object, fields: [{label: Color, name: color, widget: native-color}, 
+              {label: Large Image, name: large_image, widget: image}, 
+              {label: Large Image Client Title, name: large_image_client_title, widget: markdown}, 
+              {label: Large Image Client Description, name: large_image_client_description, widget: markdown},
+              {label: Project Team Members, name: large_image_team_members, widget: markdown}, 
+              {label: Image, name: image, widget: image}, 
+              {label: Alt, name: alt, widget: string}, 
+              {label: Title, name: title, widget: markdown}, 
+              {label: Subtitle, name: subtitle, widget: markdown}, 
+              {label: Description, name: description, widget: markdown}]}, 
+              {label: Image 3, name: image3, widget: object, fields: [{label: Color, name: color, widget: native-color}, 
+              {label: Large Image, name: large_image, widget: image}, 
+              {label: Large Image Client Title, name: large_image_client_title, widget: markdown}, 
+              {label: Large Image Client Description, name: large_image_client_description, widget: markdown},
+              {label: Project Team Members, name: large_image_team_members, widget: markdown}, 
+              {label: Image, name: image, widget: image}, 
+              {label: Alt, name: alt, widget: string}, 
+              {label: Title, name: title, widget: markdown}, 
+              {label: SubTitle, name: subtitle, widget: markdown}, 
+              {label: Description, name: description, widget: markdown}]}, 
+              {label: Image 4, name: image4, widget: object, fields: [{label: Color, name: color, widget: native-color}, 
+              {label: Image, name: image, widget: image}, 
+              {label: Large Image, name: large_image, widget: image}, 
+              {label: Large Image Client Title, name: large_image_client_title, widget: markdown}, 
+              {label: Large Image Client Description, name: large_image_client_description, widget: markdown},
+              {label: Project Team Members, name: large_image_team_members, widget: markdown}, 
+              {label: Alt, name: alt, widget: string}, 
+              {label: Title, name: title, widget: markdown}, 
+              {label: SubTitle, name: subtitle, widget: markdown}, 
+              {label: Description, name: description, widget: markdown}]}]}
+          - {label: Logos1, name: logos1, widget: markdown}
+          - {label: Logos2, name: logos2, widget: markdown}
+          - {label: Logos3, name: logos3, widget: markdown}
+          - {label: Logos4, name: logos4, widget: markdown}
