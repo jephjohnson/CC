@@ -26,7 +26,8 @@ export default class HomePageTemplate extends React.Component {
 			<div key={ p } className="columns is-centered">
 				<div className="column is-12-mobile is-10-tablet is-10-widescreen">
 					<div className="columns is-multiline is-mobile is-centered logos">
-						<ReactMarkdown key={ p.id } renderers={{ paragraph: this.renderParagraph }} alt={ "logos" + (p + 1).alt } source={ "logos" + (p + 1) } />
+						{/* <ReactMarkdown key={ p.id } renderers={{ paragraph: this.renderParagraph }} alt={ "logos" + (p + 1).alt } source={ "logos" + (p + 1) } /> */}
+						<div key={ p.id } className="column has-text-centered">{ "logos" + (p + 1) }</div>
 					</div>
 				</div>
 		</div>
