@@ -17,7 +17,6 @@ const HomePage = ({ data }) => {
         logos1={frontmatter.logos1}
         logos2={frontmatter.logos2}
         logos3={frontmatter.logos3}
-        logos3={frontmatter.logos4}
       />
     </Layout>
   )

@@ -20,13 +20,13 @@ export default class HomePageTemplate extends React.Component {
 	}
 
 	render() {
-		const { heading, description, fullImage, main  } = this.props;
-		console.log(this.props)
+		const { heading, description, fullImage, main, logos1, logos2, logos3  } = this.props;
+		//console.log(this.props)
 		const Logos = Array(4).fill("").map((a, p) =>
 			<div key={ p } className="columns is-centered">
 				<div className="column is-12-mobile is-10-tablet is-10-widescreen">
 					<div className="columns is-multiline is-mobile is-centered logos">
-						<ReactMarkdown key={p.id} renderers={{ paragraph: this.renderParagraph }} alt={ "logos" + (p + 1).alt } source={ "logos" + (p + 1) } />
+						<ReactMarkdown key={p.id} renderers={{ paragraph: this.renderParagraph }} alt={ logos + (p + 1).alt } source={ logos + (p + 1) } />
 					</div>
 				</div>
 		</div>
@@ -125,7 +125,6 @@ HomePageTemplate.propTypes = {
 	logos1: PropTypes.string,
 	logos2: PropTypes.string,
 	logos3: PropTypes.string,
-	logos4: PropTypes.string,
   main: PropTypes.shape({
     title: PropTypes.string,
 		description: PropTypes.string,
