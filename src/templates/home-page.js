@@ -35,6 +35,10 @@ export const HomePageQuery = graphql`
       frontmatter {
         heading
         description
+        logos1
+        logos2
+        logos3
+        logos4
         full_image {
             childImageSharp {
                 fluid(maxWidth: 2048, quality: 100) {

@@ -9,6 +9,10 @@ const HomePagePreview = ({ entry, getAsset }) => {
       fullImage={entry.getIn(['data', 'full_image'])}
       heading={entry.getIn(['data', 'heading'])}
       description={entry.getIn(['data', 'description'])}
+      logos1={entry.getIn(['data', 'logos1'])}
+      logos2={entry.getIn(['data', 'logos2'])}
+      logos3={entry.getIn(['data', 'logos3'])}
+      logos4={entry.getIn(['data', 'logos4'])}
       main={{
         image1: {
           title: entry.getIn(['data', 'main', 'image1', 'title']),
