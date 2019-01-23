@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Layout from './Layout'
 const ReactMarkdown = require('react-markdown')
 
 export default class HomePageTemplate extends React.Component {
@@ -82,7 +81,7 @@ export default class HomePageTemplate extends React.Component {
 
 
     return (
-			<Layout>
+			<div>
 				<section className="hero" style={{ backgroundImage: `url(${fullImage})` }}>
 						<div className="container">
 								<div className="hero-body">
@@ -114,7 +113,7 @@ export default class HomePageTemplate extends React.Component {
 							{ Logos }
 					</div>
 				</section>
-			</Layout>
+			</div>
     )
   }
 }
