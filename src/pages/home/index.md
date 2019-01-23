@@ -10,7 +10,7 @@ description: >-
 main:
   image1:
     alt: A close-up of a paper filter filled with ground coffee
-    color: '#057dc1'
+    color: '%23057dc1'
     description: Shine a light on your event!!
     image: /img/feature-1.jpg
     large_image: /img/large_image.jpg
@@ -24,7 +24,7 @@ main:
     title: Product of the Day
   image2:
     alt: Wear with Pride
-    color: '#057dc1'
+    color: '%23057dc1'
     description: |-
       Let customers put 
 
@@ -38,7 +38,7 @@ main:
     title: Wear with Pride
   image3:
     alt: The Small Touches
-    color: '#057dc1'
+    color: '%23057dc1'
     description: "Make your brand\n\n\x03loud and clear."
     image: /img/features-3.jpg
     large_image: /img/large_image.jpg
@@ -49,7 +49,7 @@ main:
     title: The Small Touches
   image4:
     alt: The Big Swings
-    color: '#f07951'
+    color: '%23f07951'
     description: "Swing for the fences with\n\n\x03this promotional hard-hitter!"
     image: /img/features-4.jpg
     large_image: /img/large_image.jpg
