@@ -107,6 +107,11 @@ export default class HomePageTemplate extends React.Component {
 				</section>
 				<section className="section">
 					<div className="container">
+							<div className="columns is-centered" id="hero-mobile">
+								<div className="column is-10-mobile has-text-centered hero-copy">
+									<ReactMarkdown className="subtitle has-text-centered" source={ description } />
+								</div>
+							</div>
 							{ Features }
 					</div>
 				</section>
