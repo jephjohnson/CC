@@ -20,7 +20,7 @@ const HomePagePreview = ({ entry, getAsset }) => {
           subtitle: entry.getIn(['data', 'main', 'subtitle']),
           image: getAsset(entry.getIn(['data', 'main', 'image1', 'image'])),
           alt: entry.getIn(['data', 'main', 'image1', 'alt']),
-          color: entry.getIn(['data', 'main', 'color']),
+          color: entry.getIn(['data', 'main', 'image1', 'color']),
         },
         image2: {
           title: entry.getIn(['data', 'main', 'image2', 'title']),
@@ -28,7 +28,7 @@ const HomePagePreview = ({ entry, getAsset }) => {
           subtitle: entry.getIn(['data', 'main', 'subtitle']),
           image: getAsset(entry.getIn(['data', 'main', 'image2', 'image'])),
           alt: entry.getIn(['data', 'main', 'image2', 'alt']),
-          color: entry.getIn(['data', 'main', 'color']),
+          color: entry.getIn(['data', 'main', 'image2', 'color']),
         },
         image3: {
           title: entry.getIn(['data', 'main', 'image3', 'title']),
@@ -36,7 +36,7 @@ const HomePagePreview = ({ entry, getAsset }) => {
           subtitle: entry.getIn(['data', 'main', 'subtitle']),
           image: getAsset(entry.getIn(['data', 'main', 'image3', 'image'])),
           alt: entry.getIn(['data', 'main', 'image3', 'alt']),
-          color: entry.getIn(['data', 'main', 'color']),
+          color: entry.getIn(['data', 'main', 'image3', 'color']),
         },
         image4: {
             title: entry.getIn(['data', 'main', 'image4', 'title']),
@@ -44,7 +44,7 @@ const HomePagePreview = ({ entry, getAsset }) => {
             subtitle: entry.getIn(['data', 'main', 'subtitle']),
             image: getAsset(entry.getIn(['data', 'main', 'image4', 'image'])),
             alt: entry.getIn(['data', 'main', 'image4', 'alt']),
-            color: entry.getIn(['data', 'main', 'color']),
+            color: entry.getIn(['data', 'main', 'image4', 'color']),
           },
       }}
     />

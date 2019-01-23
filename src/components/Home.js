@@ -129,6 +129,7 @@ HomePageTemplate.propTypes = {
   main: PropTypes.shape({
     title: PropTypes.string,
 		description: PropTypes.string,
+		color: PropTypes.string,
 		subtitle: PropTypes.string,
     image1: PropTypes.object,
     image2: PropTypes.object,
