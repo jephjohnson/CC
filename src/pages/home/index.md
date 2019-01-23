@@ -11,7 +11,7 @@ main:
   image1:
     alt: A close-up of a paper filter filled with ground coffee
     color: '#057dc1'
-    description: Shine a light on your event!
+    description: Shine a light on your event!!
     image: /img/feature-1.jpg
     large_image: /img/large_image.jpg
     large_image_client_description: Custom power banks kept fans electrified at the D23 Expo
