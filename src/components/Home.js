@@ -41,7 +41,7 @@ export default class HomePageTemplate extends React.Component {
 						<div className="column is-10-mobile is-9-tablet is-10-desktop is-9-widescreen features--outer">
 							{ p === 0 || p === 2 ? (
 									<div className="columns features--inner">
-										<div className="column cross left" onClick={ () => this.handleSort(p) }></div>  
+										<div className="column cross left"></div>  
 										<div className="column is-6-desktop features--left" style={{ backgroundImage: `url( ${main["image" + (p + 1)].image })`, backgroundColor: main["image" + (p + 1)].color }}></div>
 										<div className="column is-1-desktop arrow-left" style={{ borderBottomColor: main["image" + (p + 1)].color }}></div>
 										<div className="column is-12-mobile is-5-tablet is-4-desktop has-text-centered features--right" style={{ backgroundColor: main["image" + (p + 1)].color }}>
@@ -52,7 +52,7 @@ export default class HomePageTemplate extends React.Component {
 									</div>
 								) : p === 3 ? (
 									<div className="columns features--inner right">
-											<div className="column cross right" onClick={ () => this.handleSort(p) }></div>  
+											<div className="column cross right"></div>  
 											<div className="column is-1-desktop arrow-right" style={{ borderBottomColor: main["image" + (p + 1)].color }}></div>
 											<div className="column is-12-mobile is-5-tablet is-4-desktop has-text-centered features--right left" style={{ backgroundColor: main["image" + (p + 1)].color }}>
 												<h5>{ main["image" + (p + 1)].title }</h5>
@@ -66,7 +66,7 @@ export default class HomePageTemplate extends React.Component {
 									</div>
 								) : (
 									<div className="columns features--inner right">
-										<div className="column cross right" onClick={ () => this.handleSort(p) }></div>  
+										<div className="column cross right"></div>  
 										<div className="column is-1-desktop arrow-right" style={{ borderBottomColor: main["image" + (p + 1)].color }}></div>
 										<div className="column is-12-mobile is-5-tablet is-4-desktop has-text-centered features--right left" style={{ backgroundColor: main["image" + (p + 1)].color }}>
 											<h5>{ main["image" + (p + 1)].title }</h5>
