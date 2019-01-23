@@ -14,6 +14,10 @@ const HomePage = ({ data }) => {
         description={frontmatter.description}
         fullImage={frontmatter.full_image}
         main={frontmatter.main}
+        logos1={frontmatter.logos1}
+        logos2={frontmatter.logos2}
+        logos3={frontmatter.logos3}
+        logos3={frontmatter.logos4}
       />
     </Layout>
   )
@@ -49,7 +53,9 @@ export const HomePageQuery = graphql`
         main {
           image1 {
             title
-            description
+            color
+            subtitle
+						description
             alt
             image {
                 childImageSharp {
@@ -61,7 +67,9 @@ export const HomePageQuery = graphql`
           }
           image2 {
             title
-            description
+            color
+            subtitle
+						description
             alt
             image {
                 childImageSharp {
@@ -73,7 +81,9 @@ export const HomePageQuery = graphql`
           }
           image3 {
             title
-            description
+            color
+            subtitle
+						description
             alt
             image {
                 childImageSharp {
@@ -85,7 +95,9 @@ export const HomePageQuery = graphql`
           }
           image4 {
             title
-            description
+            color
+            subtitle
+						description
             alt
             image {
                 childImageSharp {

@@ -20,8 +20,8 @@ export default class HomePageTemplate extends React.Component {
 	}
 
 	render() {
-		const { heading, description, fullImage, main } = this.props;
-
+		const { heading, description, fullImage, main  } = this.props;
+		console.log(this.props)
 		const Logos = Array(4).fill("").map((a, p) =>
 			<div key={ p } className="columns is-centered">
 				<div className="column is-12-mobile is-10-tablet is-10-widescreen">
@@ -88,14 +88,14 @@ export default class HomePageTemplate extends React.Component {
 										<div className="columns is-centered">
 												<div className="column is-10-tablet is-9-desktop">
 												<div className="columns intro">
-														<div className="column">
-															<ReactMarkdown className="title has-text-centered" source={ heading } />
-														</div>
-														<div className="column is-2 has-text-centered arrow-wrapper">
-																<span className="arrow"></span>
+													<div className="column">
+                                <ReactMarkdown className="title has-text-centered" source={ heading } />
+                            </div>
+                            <div className="column is-2 has-text-centered arrow-wrapper">
+															<span className="arrow"></span>
 														</div> 
 														<div className="column hero-copy">
-																<ReactMarkdown className="title has-text-centered" source={ description } />
+															<ReactMarkdown className="subtitle has-text-centered" source={ description } />
 														</div>
 												</div>
 												</div>
