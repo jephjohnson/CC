@@ -116,7 +116,6 @@ HomePageTemplate.propTypes = {
     title: PropTypes.string,
 		description: PropTypes.string,
 		subtitle: PropTypes.string,
-		color: PropTypes.object,
     image1: PropTypes.object,
     image2: PropTypes.object,
     image3: PropTypes.object,

@@ -11,29 +11,37 @@ const HomePagePreview = ({ entry, getAsset }) => {
       description={entry.getIn(['data', 'description'])}
       main={{
         image1: {
-          heading: entry.getIn(['data', 'main', 'heading']),
+          title: entry.getIn(['data', 'main', 'image1', 'title']),
           description: entry.getIn(['data', 'main', 'description']),
           subtitle: entry.getIn(['data', 'main', 'subtitle']),
           image: getAsset(entry.getIn(['data', 'main', 'image1', 'image'])),
           alt: entry.getIn(['data', 'main', 'image1', 'alt']),
-          color: getAsset(entry.getIn(['data', 'main', 'image1', 'color'])),
+          color: entry.getIn(['data', 'main', 'color']),
         },
         image2: {
-          heading: entry.getIn(['data', 'main', 'heading']),
+          title: entry.getIn(['data', 'main', 'image2', 'title']),
           description: entry.getIn(['data', 'main', 'description']),
           subtitle: entry.getIn(['data', 'main', 'subtitle']),
           image: getAsset(entry.getIn(['data', 'main', 'image2', 'image'])),
           alt: entry.getIn(['data', 'main', 'image2', 'alt']),
-          color: getAsset(entry.getIn(['data', 'main', 'image2', 'color'])),
+          color: entry.getIn(['data', 'main', 'color']),
         },
         image3: {
-          heading: entry.getIn(['data', 'main', 'heading']),
+          title: entry.getIn(['data', 'main', 'image3', 'title']),
           description: entry.getIn(['data', 'main', 'description']),
           subtitle: entry.getIn(['data', 'main', 'subtitle']),
           image: getAsset(entry.getIn(['data', 'main', 'image3', 'image'])),
           alt: entry.getIn(['data', 'main', 'image3', 'alt']),
-          color: getAsset(entry.getIn(['data', 'main', 'image3', 'color'])),
+          color: entry.getIn(['data', 'main', 'color']),
         },
+        image4: {
+            title: entry.getIn(['data', 'main', 'image4', 'title']),
+            description: entry.getIn(['data', 'main', 'description']),
+            subtitle: entry.getIn(['data', 'main', 'subtitle']),
+            image: getAsset(entry.getIn(['data', 'main', 'image4', 'image'])),
+            alt: entry.getIn(['data', 'main', 'image4', 'alt']),
+            color: entry.getIn(['data', 'main', 'color']),
+          },
       }}
     />
   )

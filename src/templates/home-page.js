@@ -79,6 +79,18 @@ export const HomePageQuery = graphql`
                 }
             }
           }
+          image4 {
+            title
+            description
+            alt
+            image {
+                childImageSharp {
+                    fluid(maxWidth: 2048, quality: 100) {
+                        ...GatsbyImageSharpFluid
+                    }
+                }
+            }
+          }
         }
       }
     }
