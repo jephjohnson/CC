@@ -6,6 +6,7 @@ export default class HomePageTemplate extends React.Component {
 	
 	renderParagraph(props) {
 		const { children } = props;
+		//console.log(children.length)
 		if (children && children[0]
 				&& children.length === 1
 				&& children[0].props
@@ -21,13 +22,13 @@ export default class HomePageTemplate extends React.Component {
 
 	render() {
 		const { heading, description, fullImage, main } = this.props;
-		
+		//console.log(this.props.logos1)
 		const Logos = Array(4).fill("").map((a, p) =>
 			<div key={ p } className="columns is-centered">
 				<div className="column is-12-mobile is-10-tablet is-10-widescreen">
 					<div className="columns is-multiline is-mobile is-centered logos">
-						{/* <ReactMarkdown key={ p.id } renderers={{ paragraph: this.renderParagraph }} alt={ "logos" + (p + 1).alt } source={ "logos" + (p + 1) } /> */}
-						<div key={ p.id } className="column has-text-centered">{ "logos" + (p + 1) }</div>
+						<ReactMarkdown key={ p.id } renderers={{ paragraph: this.renderParagraph }} alt={ this.props["logos" + (p + 1)].alt } source={ this.props["logos" + (p + 1)] } /> */}
+						{/* <div key={ p.id } className="column has-text-centered">{ this.props["logos" + (p + 1)] }</div> */}
 					</div>
 				</div>
 		</div>
