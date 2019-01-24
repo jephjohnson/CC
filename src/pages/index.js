@@ -67,7 +67,7 @@ export default class IndexPage extends React.Component {
 							{ p === 0 || p === 2 ? (
 									<div className="columns features--inner">
 										<div className="column cross left" onClick={ () => this.handleSort(p) }></div>  
-										<div className="column is-6-desktop features--left" style={{ backgroundImage: `url( ${newpost.main["image" + (p + 1)].image.childImageSharp.fluid.src })`, backgroundColor: newpost.main["image" + (p + 1)].color }}></div>
+										<div className="column is-6-desktop features--left" style={{ backgroundImage: `url( ${newpost.main["image" + (p + 1)].image })`, backgroundColor: newpost.main["image" + (p + 1)].color }}></div>
 										<div className="column is-1-desktop arrow-left" style={{ borderBottomColor: newpost.main["image" + (p + 1)].color }}></div>
 										<div className="column is-12-mobile is-5-tablet is-4-desktop has-text-centered features--right" style={{ backgroundColor: newpost.main["image" + (p + 1)].color }}>
 											<h5>{ newpost.main["image" + (p + 1)].title }</h5>
@@ -84,7 +84,7 @@ export default class IndexPage extends React.Component {
 												<ReactMarkdown renderers={{ paragraph: this.renderParagraph }} source={ newpost.main["image" + (p + 1)].subtitle } />
 												<ReactMarkdown source={ newpost.main["image" + (p + 1)].description } />
 											</div>
-											<div className="column is-6-desktop features--left" style={{ backgroundImage: `url( ${newpost.main["image" + (p + 1)].image.childImageSharp.fluid.src })`, backgroundColor: newpost.main["image" + (p + 1)].color }}>
+											<div className="column is-6-desktop features--left" style={{ backgroundImage: `url( ${newpost.main["image" + (p + 1)].image })`, backgroundColor: newpost.main["image" + (p + 1)].color }}>
 												<div className="arrow-btn" style={{ borderBottomColor: newpost.main["image" + (p + 1)].color }}></div>
 												<div className="features-btn" style={{ backgroundColor: newpost.main["image" + (p + 1)].color }}><p>New & Noteworthy</p></div>
 											</div>
@@ -98,7 +98,7 @@ export default class IndexPage extends React.Component {
 											<ReactMarkdown renderers={{ paragraph: this.renderParagraph }} source={ newpost.main["image" + (p + 1)].subtitle } />
 											<ReactMarkdown source={ newpost.main["image" + (p + 1)].description } />
 										</div>
-										<div className="column is-6-desktop features--left" style={{ backgroundImage: `url( ${newpost.main["image" + (p + 1)].image.childImageSharp.fluid.src })`, backgroundColor: newpost.main["image" + (p + 1)].color }}></div>
+										<div className="column is-6-desktop features--left" style={{ backgroundImage: `url( ${newpost.main["image" + (p + 1)].image })`, backgroundColor: newpost.main["image" + (p + 1)].color }}></div>
 									</div>
 								)}
 						</div>
@@ -114,7 +114,7 @@ export default class IndexPage extends React.Component {
 					))
         }
         {posts.map(({ node: post }) => (
-          <section className="hero" key={post.id} style={{ backgroundImage: `url(${post.frontmatter.full_image.childImageSharp.fluid.src })` }}>
+          <section className="hero" key={post.id} style={{ backgroundImage: `url(${post.frontmatter.full_image })` }}>
             <div className="container">
                 <div className="hero-body">
                     <div className="columns is-centered">
@@ -186,32 +186,14 @@ export const pageQuery = graphql`
 						logos2
 						logos3
 						logos4
-            full_image {
-							childImageSharp {
-									fluid(maxWidth: 2048, quality: 100) {
-											...GatsbyImageSharpFluid
-									}
-							}
-						}
+            full_image
             templateKey
             date(formatString: "MMMM DD, YYYY")
             main {
 							image1 {
 								color
-								image {
-									childImageSharp {
-											fluid(maxWidth: 2048, quality: 100) {
-													...GatsbyImageSharpFluid
-											}
-									}
-								}
-								large_image {
-									childImageSharp {
-											fluid(maxWidth: 2048, quality: 100) {
-													...GatsbyImageSharpFluid
-											}
-									}
-								}
+								image
+								large_image
 								large_image_client_title
 								large_image_client_description
 								large_image_team_members
@@ -222,20 +204,8 @@ export const pageQuery = graphql`
 							}
 							image2 {
 								color
-								image {
-									childImageSharp {
-											fluid(maxWidth: 2048, quality: 100) {
-													...GatsbyImageSharpFluid
-											}
-									}
-								}
-								large_image {
-									childImageSharp {
-											fluid(maxWidth: 2048, quality: 100) {
-													...GatsbyImageSharpFluid
-											}
-									}
-								}
+								image
+								large_image
 								large_image_client_title
 								large_image_client_description
 								large_image_team_members
@@ -246,20 +216,8 @@ export const pageQuery = graphql`
 							}
 							image3 {
 								color
-								image {
-									childImageSharp {
-											fluid(maxWidth: 2048, quality: 100) {
-													...GatsbyImageSharpFluid
-											}
-									}
-								}
-								large_image {
-									childImageSharp {
-											fluid(maxWidth: 2048, quality: 100) {
-													...GatsbyImageSharpFluid
-											}
-									}
-								}
+								image
+								large_image
 								large_image_client_title
 								large_image_client_description
 								large_image_team_members
@@ -270,20 +228,8 @@ export const pageQuery = graphql`
 							}
 							image4 {
 								color
-								image {
-									childImageSharp {
-											fluid(maxWidth: 2048, quality: 100) {
-													...GatsbyImageSharpFluid
-											}
-									}
-								}
-								large_image {
-									childImageSharp {
-											fluid(maxWidth: 2048, quality: 100) {
-													...GatsbyImageSharpFluid
-											}
-									}
-								}
+								image
+								large_image
 								large_image_client_title
 								large_image_client_description
 								large_image_team_members

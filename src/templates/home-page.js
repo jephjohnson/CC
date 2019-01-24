@@ -12,8 +12,8 @@ const HomePage = ({ data }) => {
       <HomePageTemplate
         heading={frontmatter.heading}
         description={frontmatter.description}
-        fullImage={frontmatter.full_image}
-        main={frontmatter.main}
+				fullImage={frontmatter.full_image}
+				main={frontmatter.main}
         logos1={frontmatter.logos1}
         logos2={frontmatter.logos2}
         logos3={frontmatter.logos3}
@@ -33,82 +33,55 @@ HomePage.propTypes = {
 
 export default HomePage
 
+
 export const HomePageQuery = graphql`
   query HomePage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
-        heading
-        description
-        logos1
-        logos2
-        logos3
-        logos4
-        full_image {
-            childImageSharp {
-                fluid(maxWidth: 2048, quality: 100) {
-                    ...GatsbyImageSharpFluid
-                }
-            }
-        }
-        main {
-          image1 {
-            title
-            color
-            subtitle
+				title
+				heading
+				description
+				logos1
+				logos2
+				logos3
+				logos4
+				full_image
+				main {
+					image1 {
+						title
+						color
+						subtitle
 						description
-            alt
-            image {
-                childImageSharp {
-                    fluid(maxWidth: 2048, quality: 100) {
-                        ...GatsbyImageSharpFluid
-                    }
-                }
-            }
-          }
-          image2 {
-            title
-            color
-            subtitle
+						alt
+						image
+					}
+					image2 {
+						title
+						color
+						subtitle
 						description
-            alt
-            image {
-                childImageSharp {
-                    fluid(maxWidth: 2048, quality: 100) {
-                        ...GatsbyImageSharpFluid
-                    }
-                }
-            }
-          }
-          image3 {
-            title
-            color
-            subtitle
+						alt
+						image
+					}
+					image3 {
+						title
+						color
+						subtitle
 						description
-            alt
-            image {
-                childImageSharp {
-                    fluid(maxWidth: 2048, quality: 100) {
-                        ...GatsbyImageSharpFluid
-                    }
-                }
-            }
-          }
-          image4 {
-            title
-            color
-            subtitle
+						alt
+						image
+					}
+					image4 {
+						title
+						color
+						subtitle
 						description
-            alt
-            image {
-                childImageSharp {
-                    fluid(maxWidth: 2048, quality: 100) {
-                        ...GatsbyImageSharpFluid
-                    }
-                }
-            }
-          }
-        }
+						alt
+						image
+					}
+				}
       }
     }
   }
 `
+
