@@ -3,8 +3,7 @@ import PropTypes from 'prop-types'
 import HomePageTemplate from '../../components/Home'
 
 const HomePagePreview = ({ entry, getAsset }) => {
-  
-    return (
+  return (
     <HomePageTemplate
       fullImage={entry.getIn(['data', 'full_image'])}
       heading={entry.getIn(['data', 'heading'])}

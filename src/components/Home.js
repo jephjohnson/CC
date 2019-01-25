@@ -6,7 +6,6 @@ export default class HomePageTemplate extends React.Component {
 	
 	renderParagraph(props) {
 		const { children } = props;
-		//console.log(children.length)
 		if (children && children[0]
 				&& children.length === 1
 				&& children[0].props
@@ -22,7 +21,6 @@ export default class HomePageTemplate extends React.Component {
 
 	render() {
 		const { heading, description, fullImage, main } = this.props;
-		//console.log(this.props.logos1)
 		const Logos = Array(4).fill("").map((a, p) =>
 			<div key={ p } className="columns is-centered">
 				<div className="column is-12-mobile is-10-tablet is-10-widescreen">
@@ -80,8 +78,6 @@ export default class HomePageTemplate extends React.Component {
 				</div>
 			)
 		});
-
-
     return (
 			<div>
 				<section className="hero" style={{ backgroundImage: `url(${fullImage})` }}>
