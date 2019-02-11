@@ -122,21 +122,21 @@ export default class HomePageTemplate extends React.Component {
 }
 
 HomePageTemplate.propTypes = {
-  fullImage: PropTypes.string,
-  heading: PropTypes.string,
+	fullImage: PropTypes.string,
+	heading: PropTypes.string,
 	description: PropTypes.string,
 	logos1: PropTypes.string,
 	logos2: PropTypes.string,
 	logos3: PropTypes.string,
 	logos4: PropTypes.string,
   main: PropTypes.shape({
-    title: PropTypes.string,
-		description: PropTypes.string,
-		color: PropTypes.string,
-		subtitle: PropTypes.string,
-    image1: PropTypes.object,
-    image2: PropTypes.object,
-    image3: PropTypes.object,
-    image4: PropTypes.object,
+  title: PropTypes.string,
+	description: PropTypes.string,
+	color: PropTypes.string,
+	subtitle: PropTypes.string,
+  image1: PropTypes.object,
+  image2: PropTypes.object,
+  image3: PropTypes.object,
+  image4: PropTypes.object,
   })
 }

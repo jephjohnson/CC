@@ -30,6 +30,14 @@ collections:
           - {label: "Heading", name: "heading", widget: "markdown"}
           - {label: "Description", name: "description", widget: "markdown"}
           - {label: Main, name: main, widget: object, fields: [{label: Image1, name: image1, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}, {label: Title, name: title, widget: markdown}, {label: Subtitle, name: subtitle, widget: markdown}, {label: Description, name: description, widget: markdown}]}, {label: Image2, name: image2, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}, {label: Title, name: title, widget: markdown}, {label: Subtitle, name: subtitle, widget: markdown}, {label: Description, name: description, widget: markdown}]}, {label: Image3, name: image3, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}, {label: Title, name: title, widget: markdown}, {label: Subtitle, name: subtitle, widget: markdown}, {label: Description, name: description, widget: markdown}]}]}
+      - file: "src/pages/careers/index.md"
+        label: "Careers Page"
+        name: "careers"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "careers-page"}
+          - {label: "Full_image", name: "full_image", widget: "image"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
       - file: "src/pages/about/index.md"
         label: "About"
         name: "about"
