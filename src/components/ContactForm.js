@@ -1,4 +1,5 @@
 import React from "react";
+import Success from './Success'
 
 function encode(data) {
   const formData = new FormData();
@@ -11,12 +12,10 @@ function encode(data) {
 }
 
 export default class ContactForm extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
+  state = { isTrue: true }
 
   handleChange = e => {
+    console.log(e.target.value)
     this.setState({ [e.target.name]: e.target.value });
   };
 
@@ -34,11 +33,16 @@ export default class ContactForm extends React.Component {
         ...this.state
       })
     })
-      .then(() => alert("good"))
+      .then(() => {
+        document.forms[0].reset(); 
+        this.setState({ isTrue: false })
+      })
       .catch(error => alert(error));
   };
 
   render() {
+    const { firstname, lastname, email, isTrue } = this.state;
+    console.log({email})
     return (
         <div className="careers">
         <h3 className="has-text-centered">JOIN US</h3>
@@ -91,10 +95,15 @@ export default class ContactForm extends React.Component {
         </div>
           <div className="field">
             <div className="control has-text-centered">
-                <button className="button outline" type="submit" >Send it.</button>
+                <button className="button outline" type="submit" disabled={!email || !firstname || !lastname} >Send it.</button>
             </div>
         </div>
         </form>
+        {!isTrue ? (
+          <Success />
+        ) : (
+          null
+        )}
       </div>
     );
   }
