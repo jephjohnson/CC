@@ -13,6 +13,10 @@ export default class ContactForm extends React.Component {
     this.state = { firstname: "", lastname: "", email: "", phone: "", role: "", resume: "", isTrue: true };
   }
 
+  handleAttachment = e => {
+    this.setState({ [e.target.name]: e.target.files[0] });
+  };
+
   handleSubmit = e => {
     fetch("/", {
       method: "POST",
@@ -62,7 +66,7 @@ export default class ContactForm extends React.Component {
         <div className="field">
           <div className="control">
             <label className="input" htmlFor="upload-photo">Attach a resume</label>
-            <input className="input" type="file" id="upload-photo" accept="application/pdf, application/msword" name="resume" value={resume} onChange={this.handleChange} />
+            <input className="input" type="file" id="upload-photo" accept="application/pdf, application/msword" name="resume" value={resume} onChange={this.handleAttachment} />
           </div>
         </div>
         <div className="field">
