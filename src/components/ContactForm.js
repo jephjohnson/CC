@@ -67,7 +67,7 @@ export default class ContactForm extends React.Component {
         </div>
         <div className="field">
           <div className="control has-text-centered">
-            <button className="button outline" type="submit" disabled={!email || !name}>Send it.</button>
+            <button className="button outline" type="submit" disabled={!email || !firstname || !lastname}>Send it.</button>
           </div>
         </div>
       </form>
