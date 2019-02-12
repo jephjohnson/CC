@@ -14,8 +14,7 @@ export default class ContactForm extends React.Component {
   }
 
   handleAttachment = e => {
-    //this.setState({ [e.target.name]: e.target.files[0] });
-    console.log([e.target.getAttribute('data-tag')])
+    this.setState({ [e.target.name]: e.target.files[0] });
   };
 
   handleSubmit = e => {
@@ -30,7 +29,7 @@ export default class ContactForm extends React.Component {
     e.preventDefault();
   };
 
-  handleChange = e => this.setState({ [e.target.name]: e.target.value, [e.target.getAttribute('data-tag')]: e.target.files[0] });
+  handleChange = e => this.setState({ [e.target.name]: e.target.value });
 
   render() {
     const { firstname, lastname, email, phone, role, resume, isTrue } = this.state;
@@ -67,7 +66,7 @@ export default class ContactForm extends React.Component {
         <div className="field">
           <div className="control">
             <label className="input" htmlFor="upload-photo">Attach a resume</label>
-            <input className="input" type="file" id="upload-photo" accept="application/pdf, application/msword" data-tag="resume" name="resume" value={resume} onChange={this.handleAttachment} />
+            <input className="input" id="upload-photo" accept="application/pdf, application/msword" type="file" name="attachment" onChange={this.handleAttachment} />
           </div>
         </div>
         <div className="field">
