@@ -10,7 +10,7 @@ const encode = (data) => {
 export default class ContactForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { firstName: "", lastName: "", email: "", phone: "", role: "", resume: "", isTrue: true };
+    this.state = { firstname: "", lastname: "", email: "", phone: "", role: "", resume: "", isTrue: true };
   }
 
   handleSubmit = e => {
@@ -19,7 +19,7 @@ export default class ContactForm extends React.Component {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...this.state })
     })
-      .then(() => /*window.location = '/admin/'*/this.setState({ firstName: "", lastName: "", email: "",  phone: "", role: "", resume: "", isTrue: false }))
+      .then(() => /*window.location = '/admin/'*/this.setState({ firstname: "", lastname: "", email: "",  phone: "", role: "", resume: "", isTrue: false }))
       .catch(error => alert(error));
 
     e.preventDefault();
@@ -28,7 +28,7 @@ export default class ContactForm extends React.Component {
   handleChange = e => this.setState({ [e.target.name]: e.target.value });
 
   render() {
-    const { firstName, lastName, email, phone, role, resume, isTrue } = this.state;
+    const { firstname, lastname, email, phone, role, resume, isTrue } = this.state;
     return (
       <div className="careers">
       <h3 className="has-text-centered">JOIN US</h3>
@@ -36,12 +36,12 @@ export default class ContactForm extends React.Component {
         <input type="hidden" name="form-name" value="contact" />
         <div className="field">
           <div className="control">
-            <input className="input" type="text" placeholder="First Name" name="firstname" value={firstName} onChange={this.handleChange} />
+            <input className="input" type="text" placeholder="First Name" name="firstname" value={firstname} onChange={this.handleChange} />
           </div>
         </div>
         <div className="field">
           <div className="control">
-            <input className="input" type="text" placeholder="Last Name" name="firstname" value={lastName} onChange={this.handleChange} />
+            <input className="input" type="text" placeholder="Last Name" name="lastname" value={lastname} onChange={this.handleChange} />
           </div>
         </div>
         <div className="field">
