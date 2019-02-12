@@ -4,4 +4,4 @@ full_image: /img/hero.jpg
 title: Careers our values
 ---
 
-Single-origin coffee is coffee grown within a single known geographic origin. Sometimes, this is a single farm or a specific collection of beans from a single country. The name of the coffee is then usually the place it was grown to whatever degree available.
+Attention to detail. Intellectual Curiosity. Extraordinary Creativity. Our unique team is looking for individuals who want to do what’s never been done before – every day. We do this for giant, international companies and local small businesses. All with the human touch of a small, friendly team working together to make our creative mark.
