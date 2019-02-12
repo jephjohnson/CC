@@ -1,9 +1,6 @@
 import React from "react";
 
-const Loader = ({ modalState }) => {
-    if(!modalState) {
-      return null;
-    }
+const Loader = () => {
     return(
         <div className="loader" id="loader-6">
             <span></span>

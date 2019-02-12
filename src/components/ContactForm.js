@@ -111,7 +111,7 @@ export default class ContactForm extends React.Component {
         {!isTrue ? (
           <Success closeModal={this.toggleModal} modalState={modalState}><h3 className="has-text-centered">Thank You for your submission.</h3></Success>
         ) : (
-          <Loader modalState={modalState}/>
+          <Loader />
         )}
       </div>
     );
