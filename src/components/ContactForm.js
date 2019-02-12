@@ -12,11 +12,19 @@ function encode(data) {
 }
 
 export default class ContactForm extends React.Component {
-  state = { isTrue: true }
+  state = { isTrue: true, modalState: false }
 
   handleChange = e => {
     console.log(e.target.value)
     this.setState({ [e.target.name]: e.target.value });
+  };
+
+  toggleModal = e => {
+    this.setState((prev, props) => {
+      const newState = !prev.modalState;
+      
+      return { modalState: newState };
+    });
   };
 
   handleAttachment = e => {
@@ -35,14 +43,13 @@ export default class ContactForm extends React.Component {
     })
       .then(() => {
         document.forms[0].reset(); 
-        this.setState({ isTrue: false })
+        this.setState({ isTrue: false, modalState: true })
       })
       .catch(error => alert(error));
   };
 
   render() {
-    const { firstname, lastname, email, isTrue } = this.state;
-    console.log({email})
+    const { firstname, lastname, email, isTrue, modalState } = this.state;
     return (
         <div className="careers">
         <h3 className="has-text-centered">JOIN US</h3>
@@ -100,7 +107,7 @@ export default class ContactForm extends React.Component {
         </div>
         </form>
         {!isTrue ? (
-          <Success />
+          <Success closeModal={this.toggleModal} modalState={modalState}><p>tortor.</p></Success>
         ) : (
           null
         )}
