@@ -1,4 +1,8 @@
 
+
+
+
+
 import React from 'react'
 import Success from './Success'
 
@@ -69,11 +73,6 @@ export default class ContactForm extends React.Component {
             <label className="input" htmlFor="upload-photo">Attach a resume</label>
             <input className="input" type="file" id="upload-photo" accept="application/pdf, application/msword" name="resume" value={resume} onChange={this.handleChange} />
           </div>
-          <input
-                type="file"
-                name="attachment"
-                onChange={this.handleAttachment}
-              />
         </div>
         <div className="field">
           <div className="control has-text-centered">
