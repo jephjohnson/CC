@@ -27,8 +27,16 @@ const Careers = ({ full_image, title, content, contentComponent }) => {
       </section>
       <section className="section">
         <div className="container">
-            <PageContent className="content" content={content} />
-            <ContactForm />
+            <div className="columns is-centered">
+                  <div className="column is-10-tablet is-7-desktop">
+                    <div className="columns">
+                        <div className="column">
+                        <PageContent className="content has-text-centered" content={content} />
+                        <ContactForm />
+                        </div>
+                    </div>
+                  </div>
+              </div>
         </div>
       </section>
     </div>

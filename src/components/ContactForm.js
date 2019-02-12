@@ -1,4 +1,5 @@
 import React from 'react'
+import Success from './Success'
 
 const encode = (data) => {
   return Object.keys(data)
@@ -9,7 +10,7 @@ const encode = (data) => {
 export default class ContactForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { name: "", email: "", message: "" };
+    this.state = { name: "", email: "", phone: "", role: "", isTrue: true };
   }
 
   handleSubmit = e => {
@@ -18,7 +19,7 @@ export default class ContactForm extends React.Component {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...this.state })
     })
-      .then(() => alert("Success!"))
+      .then(() => /*window.location = '/admin/'*/this.setState({ name: "", email: "",  phone: "", role: "", isTrue: false }))
       .catch(error => alert(error));
 
     e.preventDefault();
@@ -27,28 +28,55 @@ export default class ContactForm extends React.Component {
   handleChange = e => this.setState({ [e.target.name]: e.target.value });
 
   render() {
-    const { name, email, message } = this.state;
+    const { name, email, phone, role, isTrue } = this.state;
     return (
+      <div className="careers">
+      <h3 className="has-text-centered">JOIN US</h3>
       <form onSubmit={this.handleSubmit}>
-        <p>
-          <label>
-            Your Name: <input type="text" name="name" value={name} onChange={this.handleChange} />
-          </label>
-        </p>
-        <p>
-          <label>
-            Your Email: <input type="email" name="email" value={email} onChange={this.handleChange} />
-          </label>
-        </p>
-        <p>
-          <label>
-            Message: <textarea name="message" value={message} onChange={this.handleChange} />
-          </label>
-        </p>
-        <p>
-          <button type="submit">Send</button>
-        </p>
+        <div className="field">
+          <div className="control">
+            <input className="input" type="text" placeholder="First Name" name="name" value={name} onChange={this.handleChange} />
+          </div>
+        </div>
+        <div className="field">
+          <div className="control">
+            <input className="input" type="text" placeholder="Last Name" name="name" value={name} onChange={this.handleChange} />
+          </div>
+        </div>
+        <div className="field">
+          <div className="control">
+            <input className="input" type="email" placeholder="Email" name="email" value={email} onChange={this.handleChange} />
+          </div>
+        </div>
+        <div className="field">
+          <div className="control">
+            <input className="input" type="tel" placeholder="Phone" name="phone" value={phone} onChange={this.handleChange} />
+          </div>
+        </div>
+        <div className="field">
+          <div className="control">
+            <input className="input" type="text" placeholder="Role you are seeking" name="role" value={role} onChange={this.handleChange} />
+          </div>
+        </div>
+        <div className="field">
+          <div className="control">
+            <label className="input" htmlFor="upload-photo">Attach a resume</label>
+            <input className="input" type="file" name="myImage" id="upload-photo" accept="application/pdf,application/msword" />
+          </div>
+        </div>
+        <div className="field">
+          <div className="control has-text-centered">
+            <button className="button outline" type="submit" disabled={!email || !name}>Send it.</button>
+          </div>
+        </div>
       </form>
+      
+      {!isTrue ? (
+          <Success />
+        ) : (
+          null
+        )}
+      </div>
     );
   }
 }
