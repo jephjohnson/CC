@@ -10,7 +10,7 @@ const encode = (data) => {
 export default class ContactForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { name: "", email: "", phone: "", role: "", isTrue: true };
+    this.state = { name: "", email: "", phone: "", role: "", resume: "", isTrue: true };
   }
 
   handleSubmit = e => {
@@ -19,7 +19,7 @@ export default class ContactForm extends React.Component {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...this.state })
     })
-      .then(() => /*window.location = '/admin/'*/this.setState({ name: "", email: "",  phone: "", role: "", isTrue: false }))
+      .then(() => /*window.location = '/admin/'*/this.setState({ name: "", email: "",  phone: "", role: "", resume: "", isTrue: false }))
       .catch(error => alert(error));
 
     e.preventDefault();
@@ -28,7 +28,7 @@ export default class ContactForm extends React.Component {
   handleChange = e => this.setState({ [e.target.name]: e.target.value });
 
   render() {
-    const { name, email, phone, role, isTrue } = this.state;
+    const { name, email, phone, role, resume, isTrue } = this.state;
     return (
       <div className="careers">
       <h3 className="has-text-centered">JOIN US</h3>
@@ -61,7 +61,7 @@ export default class ContactForm extends React.Component {
         <div className="field">
           <div className="control">
             <label className="input" htmlFor="upload-photo">Attach a resume</label>
-            <input className="input" type="file" name="myImage" id="upload-photo" accept="application/pdf,application/msword" />
+            <input className="input" type="file" name="myImage" id="upload-photo" accept="application/pdf,application/msword" name="resume" value={resume} onChange={this.handleChange} />
           </div>
         </div>
         <div className="field">
