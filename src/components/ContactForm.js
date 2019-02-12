@@ -1,8 +1,3 @@
-
-
-
-
-
 import React from 'react'
 import Success from './Success'
 
@@ -18,14 +13,10 @@ export default class ContactForm extends React.Component {
     this.state = { firstname: "", lastname: "", email: "", phone: "", role: "", resume: "", isTrue: true };
   }
 
-  handleAttachment = e => {
-    this.setState({ [e.target.name]: e.target.files[0] });
-  };
-
   handleSubmit = e => {
     fetch("/", {
       method: "POST",
-      //headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...this.state })
     })
       .then(() => /*window.location = '/admin/'*/this.setState({ firstname: "", lastname: "", email: "",  phone: "", role: "", resume: "", isTrue: false }))
