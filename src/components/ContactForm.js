@@ -32,7 +32,8 @@ export default class ContactForm extends React.Component {
     return (
       <div className="careers">
       <h3 className="has-text-centered">JOIN US</h3>
-      <form onSubmit={this.handleSubmit}>
+      <form name="contact" onSubmit={this.handleSubmit} data-netlify="true" data-netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact" />
         <div className="field">
           <div className="control">
             <input className="input" type="text" placeholder="First Name" name="name" value={name} onChange={this.handleChange} />
