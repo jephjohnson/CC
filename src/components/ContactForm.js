@@ -65,7 +65,7 @@ export default class ContactForm extends React.Component {
         </div>
         <div className="field">
           <div className="control">
-            <label className="input" htmlFor="upload-photo">Attach a resume</label>
+            
             <input className="input" id="upload-photo" accept="application/pdf, application/msword" type="file" name="attachment" onChange={this.handleAttachment} />
           </div>
         </div>
