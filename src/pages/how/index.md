@@ -28,11 +28,18 @@ main:
     description: With the purchasing power of a top-40 company, CIC can negotiate pricing on behalf of our entire client base – rather than each individual customer. Bottom line, our unparalleled purchasing clout translates to the lowest product costs available anywhere. In addition, we provide access to brands exclusively
   image3:
     alt: A close-up of a paper filter filled with ground coffee
-    image: /img/how-3.jpg
-    title: Creativity.
+    image: /img/how-holder.jpg
+    title: Top-notch tech.
     subtitle: |-
-      Take Promotions
+      made to simplify
 
-      to New Heights
-    description: Rather than simply take orders, our brand specialists focus on strategic trend spotting and work as your creative partner to build innovative promotional campaigns that elevate your brand.
+    description: We know the lifecycle of promotional products can often be complex, requiring multiple vendors, decorators, proofs, approvals, collaboration, and concise, timely communications to the customer. We are continually evolving our platform, developing ways to streamline and expand our customer-intimate service model.
+  image4:
+    alt: A 4
+    image: /img/how-3.jpg
+    title: Control.
+    subtitle: |-
+      your brand wing-person
+
+    description: Our success goes hand-in-hand with yours. Which is how we like it. We take the time to get to know your brand and needs – allowing  us to find products to bring it to life, and execute according to your standards.
 ---

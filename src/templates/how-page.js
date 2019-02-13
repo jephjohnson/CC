@@ -61,6 +61,13 @@ export const HowPageQuery = graphql`
             subtitle
             description
           }
+          image4 {
+            image
+            alt
+            title
+            subtitle
+            description
+          }
         }
       }
     }

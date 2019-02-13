@@ -25,7 +25,7 @@ export default class HowPageTemplate extends React.Component {
   render() {
     const { full_image, heading, main } = this.props;
 		
-		const Modules = Array(3).fill("").map((a, p) =>
+		const Modules = Array(4).fill("").map((a, p) =>
       <div key={ p } className="columns is-centered how-modules"> 
         <div className="column is-10-tablet is-10-desktop">
           <div className="box">
@@ -33,6 +33,7 @@ export default class HowPageTemplate extends React.Component {
               <div className="media-left">
                 <figure className="image">
                     <img src={ main["image" + (p + 1)].image } alt="CIC logo" />
+                    <span className="how-modules--overlay"></span>
                 </figure>
               </div>
               <div className="media-content">
