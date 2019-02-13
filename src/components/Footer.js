@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 
 const Footer = () => {
   return (
@@ -16,14 +17,14 @@ const Footer = () => {
             </div>
             <div className="column">
               <div className="columns icons-wrapper">
-                <div className="column is-3-widescreen has-text-centered">
-                  <h6>Careers</h6>
+                <div className="column is-4 is-3-widescreen has-text-centered">
+                  <Link to="/careers" style={{ color: '#FFF' }}><h6>Careers</h6></Link>
                   <ul className="icons">
                     <li className="fb"></li>
                     <li className="linkedin"></li>
                   </ul>
                 </div>
-                <div className="column is-3-widescreen has-text-centered">
+                <div className="column is-4 is-3-widescreen has-text-centered">
                   <h6>Your Privacy</h6>
                   <ul className="icons">
                     <li className="twitter"></li>

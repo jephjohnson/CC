@@ -1,6 +1,6 @@
 ---
 templateKey: how-page
-full_image: /img/hero.jpg
+full_image: /img/how-hero.jpg
 heading: "# Competitive pricing meets \x03the most personal service \x03in the industry."
 description: >-
   ### Any robot can put a logo on a t-shirt. We want to take things to the

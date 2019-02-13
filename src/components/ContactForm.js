@@ -1,6 +1,6 @@
 import React from "react";
 import Success from './Success'
-import Loader from './Loader'
+//import Loader from './Loader'
 
 function encode(data) {
   const formData = new FormData();
@@ -11,7 +11,7 @@ function encode(data) {
 }
 
 export default class ContactForm extends React.Component {
-  state = { isTrue: true, modalState: false }
+  state = { modalState: false }
 
   handleChange = e => {
     this.setState({ [e.target.name]: e.target.value });
@@ -40,13 +40,13 @@ export default class ContactForm extends React.Component {
     })
       .then(() => {
         document.forms[0].reset(); 
-        this.setState({ isTrue: false, modalState: true })
+        this.setState({ modalState: true })
       })
       .catch(error => alert(error));
   };
 
   render() {
-    const { firstname, lastname, email, isTrue, modalState } = this.state;
+    const { firstname, lastname, email, modalState } = this.state;
     return (
       <div className="careers">
         <div className="field">
@@ -108,10 +108,10 @@ export default class ContactForm extends React.Component {
           </div>
         </div>
         </form>
-        {!isTrue ? (
+        {modalState ? (
           <Success closeModal={this.toggleModal} modalState={modalState}><h3 className="has-text-centered">Thank You for your submission.</h3></Success>
         ) : (
-          <Loader />
+          null
         )}
       </div>
     );

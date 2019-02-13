@@ -4,7 +4,7 @@ import Content from './Content'
 import ContactForm from './ContactForm'
 
 
-const Careers = ({ full_image, title, content, contentComponent }) => {
+const Who = ({ full_image, title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
   return (
     <div>
@@ -52,11 +52,11 @@ const Careers = ({ full_image, title, content, contentComponent }) => {
   )
 }
 
-Careers.propTypes = {
+Who.propTypes = {
   title: PropTypes.string.isRequired,
   full_image: PropTypes.string,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
 }
 
-export default Careers
+export default Who

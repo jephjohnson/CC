@@ -1,5 +1,5 @@
 ---
-templateKey: careers-page
+templateKey: who-page
 full_image: /img/careers-hero.jpg
 title: Reach out to the world from our Chicagoland office.
 ---
