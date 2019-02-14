@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import WhoPageTemplate from '../components/who'
+import WhoPageTemplate from '../components/Who'
 import { HTMLContent } from '../components/Content'
 
 const WhoPage = ({ data }) => {
