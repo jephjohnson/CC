@@ -51,4 +51,4 @@ HowPagePreview.propTypes = {
   getAsset: PropTypes.func,
 }
 
-export default HowPreview
+export default HowPagePreview

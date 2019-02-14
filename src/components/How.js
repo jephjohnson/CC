@@ -88,6 +88,14 @@ HowPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   full_image: PropTypes.string,
   heading: PropTypes.string,
-  main: PropTypes.object,
+  main: PropTypes.shape({
+		title: PropTypes.string,
+		description: PropTypes.string,
+		subtitle: PropTypes.string,
+		image1: PropTypes.object,
+		image2: PropTypes.object,
+		image3: PropTypes.object,
+		image4: PropTypes.object,
+  })
 }
 
