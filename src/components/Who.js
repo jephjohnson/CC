@@ -23,7 +23,7 @@ export default class WhoPageTemplate extends React.Component {
   }
   
   render() {
-    const { full_image, heading, description, main } = this.props;
+    const { fullImage, heading, description, main } = this.props;
 		
 		const Modules = Array(6).fill("").map((a, p) =>
       <div key={ p } className="columns is-centered who-modules"> 
@@ -50,7 +50,7 @@ export default class WhoPageTemplate extends React.Component {
 		);
     return (
       <div>
-        <section className="hero" style={{ backgroundImage: `url(${ full_image })` }}>
+        <section className="hero" style={{ backgroundImage: `url(${ fullImage })` }}>
           <div className="container">
               <div className="hero-body">
                 <div className="columns is-centered">
@@ -95,10 +95,20 @@ export default class WhoPageTemplate extends React.Component {
 }
 
 WhoPageTemplate.propTypes = {
-  full_image: PropTypes.string,
+  fullImage: PropTypes.string,
   heading: PropTypes.string,
   description: PropTypes.string,
-  main: PropTypes.object,
+  main: PropTypes.shape({
+		title: PropTypes.string,
+		description: PropTypes.string,
+		subtitle: PropTypes.string,
+		image1: PropTypes.object,
+		image2: PropTypes.object,
+		image3: PropTypes.object,
+    image4: PropTypes.object,
+    image5: PropTypes.object,
+    image6: PropTypes.object,
+  })
 }
 
 
