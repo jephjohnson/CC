@@ -3,6 +3,7 @@ import * as NativeColorWidget from 'netlify-cms-widget-native-color'
 
 import HomePagePreview from './preview-templates/HomePagePreview'
 import HowPagePreview from './preview-templates/HowPagePreview'
+import WhoPagePreview from './preview-templates/WhoPagePreview'
 import AboutPagePreview from './preview-templates/AboutPagePreview'
 import BlogPostPreview from './preview-templates/BlogPostPreview'
 
@@ -11,3 +12,4 @@ CMS.registerPreviewTemplate('about', AboutPagePreview)
 CMS.registerPreviewTemplate('blog', BlogPostPreview)
 CMS.registerPreviewTemplate('home', HomePagePreview)
 CMS.registerPreviewTemplate('how', HowPagePreview)
+CMS.registerPreviewTemplate('how', WhoPagePreview)

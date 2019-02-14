@@ -12,7 +12,7 @@ const WhoPage = ({ data }) => {
     <Layout>
       <WhoPageTemplate
         contentComponent={ HTMLContent }
-        full_image={ frontmatter.full_image }
+        fullImage={ frontmatter.full_image }
         heading={ frontmatter.heading }
         description={ frontmatter.description }
         main={ frontmatter.main }
