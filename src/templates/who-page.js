@@ -2,26 +2,31 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import WhoPageTemplate from '../components/Who'
+import WhoPageTemplate from '../components/who'
 import { HTMLContent } from '../components/Content'
 
 const WhoPage = ({ data }) => {
-  const { markdownRemark: post } = data
+  const { frontmatter } = data.markdownRemark
+
   return (
     <Layout>
       <WhoPageTemplate
         contentComponent={ HTMLContent }
-        title={ post.frontmatter.title }
-        full_image={ post.frontmatter.full_image }
-        heading={ post.heading }
-        content={ post.html }
+        full_image={ frontmatter.full_image }
+        heading={ frontmatter.heading }
+        description={ frontmatter.description }
+        main={ frontmatter.main }
       />
     </Layout>
   )
 }
 
 WhoPage.propTypes = {
-  data: PropTypes.object.isRequired,
+  data: PropTypes.shape({
+    markdownRemark: PropTypes.shape({
+      frontmatter: PropTypes.object,
+    }),
+  }),
 }
 
 export default WhoPage
@@ -30,13 +35,58 @@ export default WhoPage
 export const WhoPageQuery = graphql`
   query WhoPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
-      html
       frontmatter {
-        title
         full_image
         heading
+        description
+        main {
+          image1 {
+            image
+            alt
+            title
+            subtitle
+            description
+          }
+          image2 {
+            image
+            alt
+            title
+            subtitle
+            description
+          }
+          image3 {
+            image
+            alt
+            title
+            subtitle
+            description
+          }
+          image4 {
+            image
+            alt
+            title
+            subtitle
+            description
+          }
+          image5 {
+            image
+            alt
+            title
+            subtitle
+            description
+          }
+          image6 {
+            image
+            alt
+            title
+            subtitle
+            description
+          }
+        }
       }
     }
   }
 `
+
+
 

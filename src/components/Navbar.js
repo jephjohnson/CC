@@ -20,7 +20,7 @@ class Navbar extends React.Component {
     const { hidden} = this.props;
 
     const navLinks = [
-      {route: '/', text: 'What'},
+      {route: '/what', text: 'What'},
       {route: '/how', text: 'How'},
       {route: '/who', text: 'Who'},
       {route: '/ideas', text: 'Ideas'},

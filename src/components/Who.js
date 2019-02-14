@@ -1,62 +1,104 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Content from './Content'
-import ContactForm from './ContactForm'
+const ReactMarkdown = require('react-markdown')
 
 
-const Who = ({ full_image, title, content, contentComponent }) => {
-  const PageContent = contentComponent || Content
-  return (
-    <div>
-      <section className="hero" style={{ backgroundImage: `url(${ full_image })` }}>
-        <div className="container">
-            <div className="hero-body">
-              <div className="columns is-centered">
+export default class WhoPageTemplate extends React.Component {
+
+  renderParagraph(props) {
+		const { children } = props;
+		
+		if (children && children[0]
+			&& children.length === 1
+			&& children[0].props
+			&& children[0].props.src) { 
+			return <div className="column has-text-centered">{children}</div>;
+		}
+
+		if (children[0].props.children.value !== "") { 
+			return <h6>{children}</h6>;
+		}
+		
+		return <p>{children}</p>;
+  }
+  
+  render() {
+    const { full_image, heading, description, main } = this.props;
+		
+		const Modules = Array(6).fill("").map((a, p) =>
+      <div key={ p } className="columns is-centered who-modules"> 
+        <div className="column is-10-tablet is-10-desktop">
+          <div className="box">
+            <article className="media">
+              <div className="media-left">
+                <figure className="image">
+                    <span className="who-modules--overlay"></span>
+                    <img src={ main["image" + (p + 1)].image } alt={ main["image" + (p + 1)].alt } />
+                </figure>
+              </div>
+              <div className="media-content">
+                <div className="content">
+                  <h2>{ main["image" + (p + 1)].title }</h2>
+                  <ReactMarkdown renderers={{ paragraph: this.renderParagraph }} source={ main["image" + (p + 1)].subtitle } />
+                  <ReactMarkdown source={ main["image" + (p + 1)].description } />
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+		);
+    return (
+      <div>
+        <section className="hero" style={{ backgroundImage: `url(${ full_image })` }}>
+          <div className="container">
+              <div className="hero-body">
+                <div className="columns is-centered">
+                    <div className="column is-10-tablet is-9-desktop">
+                      <div className="columns">
+                          <div className="column">
+                              <ReactMarkdown className="title has-text-centered" source={ heading } />
+                          </div>
+                      </div>
+                    </div>
+                </div>
+                <div className="columns is-centered">
                   <div className="column is-10-tablet is-9-desktop">
                     <div className="columns">
-                        <div className="column">
-                          <div className="title has-text-centered">
-                            <h1>{title}</h1>
-                          </div>
-                        </div>
+                        <div className="column has-text-centered arrow-wrapper">
+                          <span className="arrow"></span>
+                        </div> 
                     </div>
                   </div>
-              </div>
-              <div className="columns is-centered">
-                <div className="column is-10-tablet is-9-desktop">
-                  <div className="columns">
-                      <div className="column has-text-centered arrow-wrapper">
-                        <span className="arrow"></span>
-                      </div> 
                   </div>
-                </div>
-                </div>
-            </div>
-        </div>
-      </section>
-      <section className="section">
-        <div className="container">
+              </div>
+          </div>
+        </section>
+        <section className="section who-section">
+          <div className="container">
             <div className="columns is-centered">
-                  <div className="column is-10-tablet is-7-desktop">
-                    <div className="columns">
-                        <div className="column">
-                        <PageContent className="content has-text-centered" content={content} />
-                        <ContactForm />
-                        </div>
-                    </div>
+              <div className="column is-10-tablet is-7-desktop">
+                  <div className="columns">
+                      <div className="column">
+                        <h3 className="has-text-centered">Our Leaders.</h3>
+                        <ReactMarkdown className="has-text-centered" source={ description } />
+                      </div>
                   </div>
               </div>
-        </div>
-      </section>
-    </div>
-  )
+            </div>
+            {Modules}
+          </div>
+        </section>
+      </div>
+    )
+  }
 }
 
-Who.propTypes = {
-  title: PropTypes.string.isRequired,
+WhoPageTemplate.propTypes = {
   full_image: PropTypes.string,
-  content: PropTypes.string,
-  contentComponent: PropTypes.func,
+  heading: PropTypes.string,
+  description: PropTypes.string,
+  main: PropTypes.object,
 }
 
-export default Who
+
