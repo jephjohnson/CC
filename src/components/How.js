@@ -32,7 +32,7 @@ export default class HowPageTemplate extends React.Component {
             <article className="media">
               <div className="media-left">
                 <figure className="image">
-                    <img src={ main["image" + (p + 1)].image } alt="CIC logo" />
+                    <img src={ main["image" + (p + 1)].image } alt={ main["image" + (p + 1)].alt } />
                     <span className="how-modules--overlay"></span>
                 </figure>
               </div>
