@@ -13,7 +13,7 @@ const HowPage = ({ data }) => {
       <HowPageTemplate
         contentComponent={ HTMLContent }
         title={ frontmatter.title }
-        full_image={ frontmatter.full_image }
+        fullImage={ frontmatter.full_image }
         heading={ frontmatter.heading }
         main={ frontmatter.main }
       />

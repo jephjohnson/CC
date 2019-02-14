@@ -23,7 +23,7 @@ export default class HowPageTemplate extends React.Component {
   }
   
   render() {
-    const { full_image, heading, main } = this.props;
+    const { fullImage, heading, main } = this.props;
 		
 		const Modules = Array(4).fill("").map((a, p) =>
       <div key={ p } className="columns is-centered how-modules"> 
@@ -50,7 +50,7 @@ export default class HowPageTemplate extends React.Component {
 		);
     return (
       <div>
-        <section className="hero" style={{ backgroundImage: `url(${ full_image })` }}>
+        <section className="hero" style={{ backgroundImage: `url(${ fullImage })` }}>
           <div className="container">
               <div className="hero-body">
                 <div className="columns is-centered">
@@ -86,7 +86,7 @@ export default class HowPageTemplate extends React.Component {
 
 HowPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
-  full_image: PropTypes.string,
+  fullImage: PropTypes.string,
   heading: PropTypes.string,
   main: PropTypes.shape({
 		title: PropTypes.string,
