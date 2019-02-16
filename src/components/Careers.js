@@ -4,11 +4,11 @@ import Content from './Content'
 import ContactForm from './ContactForm'
 
 
-const Careers = ({ full_image, title, content, contentComponent }) => {
+const Careers = ({ fullImage, title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
   return (
     <div>
-      <section className="hero" style={{ backgroundImage: `url(${ full_image })` }}>
+      <section className="hero" style={{ backgroundImage: `url(${ fullImage })` }}>
         <div className="container">
             <div className="hero-body">
               <div className="columns is-centered">
@@ -54,7 +54,7 @@ const Careers = ({ full_image, title, content, contentComponent }) => {
 
 Careers.propTypes = {
   title: PropTypes.string.isRequired,
-  full_image: PropTypes.string,
+  fullImage: PropTypes.string,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
 }
