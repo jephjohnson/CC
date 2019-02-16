@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import CareerPageTemplate from '../../components/Career'
+import CareerPageTemplate from '../../components/Careers'
 
 const CareerPagePreview = ({ entry, getAsset }) => {
   return (
