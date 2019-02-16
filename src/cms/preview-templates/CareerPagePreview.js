@@ -6,7 +6,7 @@ const CareerPagePreview = ({ entry, getAsset }) => {
   return (
     <CareerPageTemplate
       fullImage={entry.getIn(['data', 'full_image'])}
-      title={entry.getIn(['data', 'heading'])}
+      title={entry.getIn(['data', 'title'])}
       description={entry.getIn(['data', 'description'])}
       content={entry.getIn(['data', 'body'])}
     />
