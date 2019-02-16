@@ -8,7 +8,7 @@ const CareerPagePreview = ({ entry, getAsset }) => {
       fullImage={entry.getIn(['data', 'full_image'])}
       title={entry.getIn(['data', 'heading'])}
       description={entry.getIn(['data', 'description'])}
-      content={getAsset('body')}
+      content={entry.getIn(['data', 'body'])}
     />
   )
 }
