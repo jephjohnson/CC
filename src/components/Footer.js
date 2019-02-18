@@ -25,7 +25,7 @@ const Footer = () => {
                   </ul>
                 </div>
                 <div className="column is-4 is-3-widescreen has-text-centered">
-                  <Link to="/careers" style={{ color: '#FFF' }}><h6>Your Privacy</h6></Link>
+                  <Link to="/privacy" style={{ color: '#FFF' }}><h6>Your Privacy</h6></Link>
                   <ul className="icons">
                     <li className="twitter"></li>
                     <li className="instagram"></li>
