@@ -7,6 +7,7 @@ import WhoPagePreview from './preview-templates/WhoPagePreview'
 import AboutPagePreview from './preview-templates/AboutPagePreview'
 import BlogPostPreview from './preview-templates/BlogPostPreview'
 import CareerPagePreview from './preview-templates/CareerPagePreview'
+import PrivacyPagePreview from './preview-templates/PrivacyPagePreview'
 
 CMS.registerWidget('native-color', NativeColorWidget.Control)
 CMS.registerPreviewTemplate('about', AboutPagePreview)
@@ -15,3 +16,4 @@ CMS.registerPreviewTemplate('home', HomePagePreview)
 CMS.registerPreviewTemplate('how', HowPagePreview)
 CMS.registerPreviewTemplate('who', WhoPagePreview)
 CMS.registerPreviewTemplate('careers', CareerPagePreview)
+CMS.registerPreviewTemplate('privacy', PrivacyPagePreview)
