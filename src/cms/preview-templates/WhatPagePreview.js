@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import WhoPageTemplate from '../../components/Who'
+import WhatPageTemplate from '../../components/What'
 
-const WhoPagePreview = ({ entry, getAsset }) => {
+const WhatPagePreview = ({ entry, getAsset }) => {
   return (
-    <WhoPageTemplate
+    <WhatPageTemplate
       fullImage={entry.getIn(['data', 'full_image'])}
       heading={entry.getIn(['data', 'heading'])}
       description={entry.getIn(['data', 'description'])}
@@ -52,11 +52,11 @@ const WhoPagePreview = ({ entry, getAsset }) => {
   )
 }
 
-WhoPagePreview.propTypes = {
+WhatPagePreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
   }),
   getAsset: PropTypes.func,
 }
 
-export default WhoPagePreview
+export default WhatPagePreview
