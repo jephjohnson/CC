@@ -46,7 +46,15 @@ const WhoPagePreview = ({ entry, getAsset }) => {
           image: getAsset(entry.getIn(['data', 'main', 'image5', 'image'])),
           alt: entry.getIn(['data', 'main', 'image5', 'alt']),
           color: entry.getIn(['data', 'main', 'image5', 'color']),
-        }
+        },
+        image6: {
+          title: entry.getIn(['data', 'main', 'image6', 'title']),
+          description: entry.getIn(['data', 'main', 'image6', 'description']),
+          subtitle: entry.getIn(['data', 'main', 'image6', 'subtitle']),
+          image: getAsset(entry.getIn(['data', 'main', 'image6', 'image'])),
+          alt: entry.getIn(['data', 'main', 'image6', 'alt']),
+          color: entry.getIn(['data', 'main', 'image6', 'color']),
+        },
       }}
     />
   )

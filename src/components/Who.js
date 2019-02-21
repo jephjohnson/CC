@@ -25,7 +25,7 @@ export default class WhoPageTemplate extends React.Component {
   render() {
     const { fullImage, heading, description, main } = this.props;
 		
-		const Modules = Array(5).fill("").map((a, p) =>
+		const Modules = Array(6).fill("").map((a, p) =>
       <div key={ p } className="columns is-centered who-modules"> 
         <div className="column is-10-tablet is-10-desktop">
           <div className="box">
