@@ -29,7 +29,7 @@ const Privacy = ({ fullImage, title, content, contentComponent }) => {
                   <div className="column is-10-tablet is-7-desktop">
                     <div className="columns">
                         <div className="column">
-                        <PageContent className="content has-text-centered" content={content} />
+                        <PageContent className="content privacy-content" content={content} />
                         </div>
                     </div>
                   </div>
