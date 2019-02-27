@@ -1,12 +1,15 @@
 ---
 templateKey: home-page
 full_image: /img/hero.jpg
-heading: "# Leave the \x03expected to \n\n\n\n# \x03the robots."
+heading: "# Raise your expectations."
 description: >-
-  ### Any robot can put a logo on a t-shirt. We want to take things to the
-  **next level** with something extraordinary. We want to be the **creative
-  partner **that sparks love for your brand through **innovation** and
-  **strategic trend spotting**.
+  ### Anyone can put a logo on a
+  t-shirt. We want to take things
+  to the **next level** with something
+  extraordinary. We want to be the
+  **creative partner** that sparks love
+  for your brand through **innovation**
+  and **strategic trend spotting**.
 main:
   image1:
     alt: A close-up of a paper filter filled with ground coffee

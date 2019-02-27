@@ -49,7 +49,7 @@ class Navbar extends React.Component {
     );
 
     return (
-      <nav className="navbar is-transparent" role="navigation" aria-label="main navigation">
+      <nav className="navbar is-transparent offwhite" role="navigation" aria-label="main navigation">
         <div className="level container">
           { Links1 }
           <div className="navbar-brand level-item has-text-centered">

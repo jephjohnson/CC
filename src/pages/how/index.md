@@ -1,12 +1,7 @@
 ---
 templateKey: how-page
 full_image: /img/how-hero.jpg
-heading: "# Competitive pricing meets \x03the most personal service \x03in the industry."
-description: >-
-  ### Any robot can put a logo on a t-shirt. We want to take things to the
-  **next level** with something extraordinary. We want to be the **creative
-  partner **that sparks love for your brand through **innovation** and
-  **strategic trend spotting**.
+heading: "# Competitive pricing or personalized service? Why not both?"
 main:
   image1:
     alt: A close-up of a paper filter filled with ground coffee
