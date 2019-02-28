@@ -1,7 +1,7 @@
 ---
 templateKey: who-page
 full_image: /img/careers-hero.jpg
-heading: "# Meet your partners in\x03 brand building,\x03 excitement sparking\x03 and game changing."
+heading: "# Meet your partners in\x03brand building, excitement sparking and game changing."
 description: CIC’s leadership is an all-star lineup of industry professionals along with customer service, supply chain and quality experts.
 main:
   image1:

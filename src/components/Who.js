@@ -29,7 +29,7 @@ export default class WhoPageTemplate extends React.Component {
       <div key={ p } className="columns is-centered who-modules"> 
         <div className="column is-10-tablet is-10-desktop">
           <div className="box">
-            <article className="media">
+            <article className="media offwhite">
               <div className="media-left">
                 <figure className="image">
                     <span className="who-modules--overlay"></span>
@@ -38,7 +38,7 @@ export default class WhoPageTemplate extends React.Component {
               </div>
               <div className="media-content">
                 <div className="content">
-                  <h2>{ main["image" + (p + 1)].title }</h2>
+                  <h3>{ main["image" + (p + 1)].title }</h3>
                   <ReactMarkdown renderers={{ paragraph: this.renderParagraph }} source={ main["image" + (p + 1)].subtitle } />
                   <ReactMarkdown source={ main["image" + (p + 1)].description } />
                 </div>

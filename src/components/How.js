@@ -29,7 +29,7 @@ export default class HowPageTemplate extends React.Component {
       <div key={ p } className="columns is-centered how-modules"> 
         <div className="column is-10-tablet is-10-desktop">
           <div className="box">
-            <article className="media">
+            <article className="media offwhite">
               <div className="media-left">
                 <figure className="image">
                     <img src={ main["image" + (p + 1)].image } alt={ main["image" + (p + 1)].alt } />
@@ -38,7 +38,7 @@ export default class HowPageTemplate extends React.Component {
               </div>
               <div className="media-content">
                 <div className="content">
-                <h2>{ main["image" + (p + 1)].title }</h2>
+                <h3>{ main["image" + (p + 1)].title }</h3>
                 <ReactMarkdown renderers={{ paragraph: this.renderParagraph }} source={ main["image" + (p + 1)].subtitle } />
                 <ReactMarkdown source={ main["image" + (p + 1)].description } />
                 </div>
@@ -57,7 +57,7 @@ export default class HowPageTemplate extends React.Component {
                     <div className="column is-10-tablet is-9-desktop">
                       <div className="columns">
                           <div className="column">
-                              <ReactMarkdown className="title has-text-centered" source={ heading } />
+                              <ReactMarkdown className="title has-text-centered how-heading" source={ heading } />
                           </div>
                       </div>
                     </div>
