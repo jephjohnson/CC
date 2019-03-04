@@ -38,7 +38,7 @@ export default class WhatPageTemplate extends React.Component {
               </div>
               <div className="media-content">
                 <div className="content">
-                <h2>{ main["image" + (p + 1)].title }</h2>
+                <h3>{ main["image" + (p + 1)].title }</h3>
                 <ReactMarkdown source={ main["image" + (p + 1)].description } />
                 </div>
               </div>
