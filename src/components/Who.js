@@ -89,6 +89,25 @@ export default class WhoPageTemplate extends React.Component {
             {Modules}
           </div>
         </section>
+        <section className="section who-section">
+          <div className="container">
+            <div className="columns is-centered">
+              <div className="column is-10-tablet is-7-desktop">
+                  <div className="columns">
+                      <div className="column">
+                      <h6 className="has-text-centered who-footer">Attention to detail.<br/>Intellectual Curiosity.<br/>Extraordinary Creativity.</h6>
+                        <p className="has-text-centered">Our unique team is looking for individuals looking<br/>to to do what’s never been done before – every day. </p>
+                        <div className="field">
+                          <div className="control has-text-centered">
+                              <button className="button outline" type="submit" disabled>Join Us</button>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+            </div>            
+          </div>
+        </section>
       </div>
     )
   }
