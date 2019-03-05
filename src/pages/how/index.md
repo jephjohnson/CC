@@ -20,7 +20,7 @@ main:
       BIG SAVINGS FOR
 
       EVEN SMALL ORDERS
-    description: With the purchasing power of a top-40 company, CIC can negotiate pricing on behalf of our entire client base – rather than each individual customer. Bottom line, our unparalleled purchasing clout translates to the lowest product costs available anywhere. In addition, we provide access to brands exclusively
+    description: With the purchasing power of an industry leader, CIC can negotiate pricing on behalf of our entire client base – rather than each individual customer. Bottom line, our unparalleled purchasing clout translates to the lowest product costs available anywhere. In addition, we provide access to brands exclusively sold through retail – not promotional – channels. This is on top of the more than 600,000 hard and soft goods traditionally available through our industry suppliers. 
   image3:
     alt: A close-up of a paper filter filled with ground coffee
     image: /img/how-holder.jpg
