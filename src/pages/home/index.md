@@ -1,7 +1,7 @@
 ---
 templateKey: home-page
 full_image: /img/hero.jpg
-heading: '# Raise your adkfjadsfkljdfkldjsf expectations.'
+heading: '# Raise your expectations.'
 description: >-
   ### Anyone can put a logo on a t-shirt. We want to take things to the **next
   level** with something extraordinary. We want to be the **creative partner**
