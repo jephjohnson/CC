@@ -1,15 +1,12 @@
 ---
 templateKey: home-page
 full_image: /img/hero.jpg
-heading: "# Raise your expectations."
+heading: '# Raise your adkfjadsfkljdfkldjsf expectations.'
 description: >-
-  ### Anyone can put a logo on a
-  t-shirt. We want to take things
-  to the **next level** with something
-  extraordinary. We want to be the
-  **creative partner** that sparks love
-  for your brand through **innovation**
-  and **strategic trend spotting**.
+  ### Anyone can put a logo on a t-shirt. We want to take things to the **next
+  level** with something extraordinary. We want to be the **creative partner**
+  that sparks love for your brand through **innovation** and **strategic trend
+  spotting**.
 main:
   image1:
     alt: A close-up of a paper filter filled with ground coffee
